@@ -1,15 +1,14 @@
 package com.fourfinance.pages;
 
-import com.fourfinance.utils.PageObject;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class BookPage extends Header{
 
-    private static final Logger LOG = LoggerFactory.getLogger(BookPage.class);
+    private static final Logger LOG = LogManager.getLogger(BookPage.class);
 
     @FindBy(xpath = "//div[@class='work-title-and-author desktop']//h1[@class='work-title']")
     WebElement workTitle;

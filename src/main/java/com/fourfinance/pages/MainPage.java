@@ -1,14 +1,14 @@
 package com.fourfinance.pages;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class MainPage extends Header {
-    private static final Logger LOG = LoggerFactory.getLogger(MainPage.class);
+    private static final Logger LOG = LogManager.getLogger(MainPage.class);
 
     @FindBy(xpath = "//div[@id='contentBody']//h2[contains(text(), 'Welcome to Open Library')]")
     private WebElement textWelcomeToOL;

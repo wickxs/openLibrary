@@ -1,18 +1,17 @@
 package com.fourfinance.pages;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ResultsPage extends Header{
-    private static final Logger LOG = LoggerFactory.getLogger(ResultsPage.class);
+    private static final Logger LOG = LogManager.getLogger(ResultsPage.class);
 
     @FindBy(xpath = "//div[@id='contentHead']//h1[contains(text(),'Search Books')]")
     private WebElement textSearchBooks;
